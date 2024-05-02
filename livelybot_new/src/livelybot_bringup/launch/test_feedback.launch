@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find livelybot_description)/robot_param/1dof_STM32H730_model.yaml" command="load" />
+  <node pkg="livelybot_serial" name="test_feedback" type="test_feedback" output="screen" />
+</launch> 

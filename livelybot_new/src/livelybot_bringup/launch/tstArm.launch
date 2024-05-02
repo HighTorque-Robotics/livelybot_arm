@@ -1,0 +1,5 @@
+<launch>
+  <rosparam file="$(find livelybot_description)/robot_param/6dof_STM32H730_model_HL06_Orin_params.yaml" command="load" />
+
+  <node pkg="livelybot_serial" name="testArm" type="testArm" output="screen" />
+</launch> 

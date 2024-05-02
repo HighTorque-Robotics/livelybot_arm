@@ -1,0 +1,5 @@
+<launch>
+  <rosparam file="$(find livelybot_description)/robot_param/12dof_STM32H730_model_P_Hector_params_livelybot.yaml" command="load" />
+
+  <node pkg="livelybot_serial" name="test_motor_torque" type="test_motor_torque" output="screen" />
+</launch> 

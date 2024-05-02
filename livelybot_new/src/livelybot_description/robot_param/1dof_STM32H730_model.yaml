@@ -1,0 +1,25 @@
+robot:
+  robot_name: "five motors robot"
+  arm_dof: 0
+  leg_dof: 2
+  Serial_Type: "/dev/ttyUSB"
+  Seial_baudrate: 4000000
+  Serial_allocate: "1for2" #一个ft4232带2块CANboard,此时默认一块板子引出2个串口,一个串口与一个CAN口相对应
+  CAN_Type: "CAN-FD BRS" # "CAN-FD"\"CAN-FD BRS"\"CAN 2.0B"
+  CANboard_type: "STM32 H730"
+  CANboard_num: 1
+  CANboard:
+    No_1_CANboard:
+      CANport_num: 1
+      CANport:
+        CANport_1:
+          motor_num: 1
+          motor:
+            motor1:
+                type: 2
+                id: 9
+                name: "4538"
+                num: 1
+
+           
+

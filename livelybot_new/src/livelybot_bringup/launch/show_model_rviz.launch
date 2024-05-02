@@ -1,0 +1,4 @@
+<launch>
+    <include file='$(find livelybot_bringup)/launch/open_imu.launch' />
+    <include file='$(find livelybot_urdf)/launch/display.launch' />
+</launch>

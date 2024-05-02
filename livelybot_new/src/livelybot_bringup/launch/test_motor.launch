@@ -1,0 +1,4 @@
+<launch>
+  <include file='$(find livelybot_description)/launch/livelybot_description.launch' />
+  <node pkg="livelybot_serial" name="test_motor" type="test_motor" output="screen" />
+</launch> 

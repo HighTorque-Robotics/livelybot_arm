@@ -1,0 +1,5 @@
+<launch>
+  <rosparam file="$(find livelybot_description)/robot_param/12dof_STM32H730_model_P_Hector_params_livelybot.yaml" command="load" />
+  <!-- <rosparam file="/home/sunteng/control_ws/src/livelybot_robot/src/livelybot_description/robot_param/18dof_STM32H730_model_H_Hector_params.yaml" command="load" /> -->
+  <node pkg="livelybot_serial" name="ik_run_1" type="ik_run" output="screen" />
+</launch> 

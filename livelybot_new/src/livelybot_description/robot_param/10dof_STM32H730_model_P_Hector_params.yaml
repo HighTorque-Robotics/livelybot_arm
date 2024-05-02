@@ -1,0 +1,83 @@
+robot:
+  robot_name: "HuangPx HECTOR"
+  arm_dof: 0
+  leg_dof: 5
+  Serial_Type: "/dev/ttyUSB"
+  Seial_baudrate: 4000000
+  Serial_allocate: "1for2" #一个ft4232带2块CANboard,此时默认一块板子引出2个串口,一个串口与一个CAN口相对应
+                #  "1for1"  一个ft4232带1块CANboard,此时默认一块板子引出4个串口,一个串口与一个CAN口相对应
+  CAN_Type: "CAN-FD BRS" # "CAN-FD"\"CAN-FD BRS"\"CAN 2.0B"
+  CANboard_type: "STM32 H730"
+  CANboard_num: 2
+  CANboard:
+    No_1_CANboard:
+      CANport_num: 2
+      CANport:
+        CANport_1:
+          motor_num: 2
+          motor:
+            motor1:
+                type: 0
+                id: 2
+                name: "L_toe"
+                num: 5
+                
+            motor2:
+                type: 0
+                id: 4
+                name: "L_calf"
+                num: 4
+
+        CANport_2:
+          motor_num: 3
+          motor:
+              motor1:
+                type: 0
+                id: 6 
+                name: "L_hip"
+                num: 1
+              motor2:
+                type: 0
+                id: 5
+                name: "L_hip2"
+                num: 2
+              motor3:
+                type: 0
+                id: 3
+                name: "L_thigh"
+                num: 3
+    No_2_CANboard:
+      CANport_num: 2
+      CANport:
+        CANport_1:
+          motor_num: 2
+          motor:
+            motor1:
+                type: 0
+                id: 2
+                name: "R_toe"
+                num: 10
+            motor2:
+                type: 0
+                id: 4
+                name: "R_calf"
+                num: 9
+
+        CANport_2:
+          motor_num: 3
+          motor:
+              motor1:
+                type: 0
+                id: 6
+                name: "R_hip"
+                num: 6
+              motor2:
+                type: 0
+                id: 5
+                name: "R_hip2"
+                num: 7
+              motor3:
+                type: 0
+                id: 3
+                name: "R_thigh"
+                num: 8

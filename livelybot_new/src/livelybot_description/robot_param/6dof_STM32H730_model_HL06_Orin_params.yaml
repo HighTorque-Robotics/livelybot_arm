@@ -1,0 +1,50 @@
+robot:
+  robot_name: "HuangPx HECTOR"
+  arm_dof: 6
+  leg_dof: 0
+  Serial_Type: "/dev/ttyUSB"
+  Seial_baudrate: 4000000
+  Serial_allocate: "1for2" #一个ft4232带2块CANboard,此时默认一块板子引出2个串口,一个串口与一个CAN口相对应
+  CAN_Type: "CAN-FD BRS" # "CAN-FD"\"CAN-FD BRS"\"CAN 2.0B"
+  CANboard_type: "STM32 H730"
+  CANboard_num: 1
+  CANboard:
+    No_1_CANboard:
+      CANport_num: 2
+      CANport:
+        CANport_1:
+          motor_num: 3
+          motor:
+            motor1:
+                type: 3
+                id: 1
+                name: "joint_1"
+                num: 1
+            motor2:
+                type: 3
+                id: 2
+                name: "joint_2"
+                num: 2
+            motor3:
+                type: 1
+                id: 3
+                name: "joint_3"
+                num: 3
+        CANport_2:
+          motor_num: 3
+          motor:
+              motor1:
+                type: 1
+                id: 4
+                name: "joint_4"
+                num: 4
+              motor2:
+                type: 1
+                id: 5
+                name: "joint_5"
+                num: 5
+              motor3:
+                type: 1
+                id: 6
+                name: "joint_6"
+                num: 6
